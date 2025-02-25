@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace consultaAluno
 {
-    public partial class Form1 : Form
+    public partial class frmBuscarAluno : Form
     {
-        public Form1()
+        public frmBuscarAluno()
         {
             InitializeComponent();
         }

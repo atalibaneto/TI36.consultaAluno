@@ -8,7 +8,7 @@ namespace consultaAluno
 {
     internal class conexao
     {
-        private static string server = @"BOT00DN099W11-1";
+        private static string server = @"BOT0713152W11-1";
         private static string database = "DBAluno";
         private static string user = "sa";
         private static string password = "sasenac";
