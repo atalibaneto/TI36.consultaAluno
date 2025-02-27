@@ -31,41 +31,88 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAdicionar = new System.Windows.Forms.Button();
+            this.btnAddCurso = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscarAluno = new System.Windows.Forms.TextBox();
+            this.btnBuscarAluno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 376);
+            this.button1.Location = new System.Drawing.Point(12, 551);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 62);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Conectar ao BD";
+            this.button1.Text = "Consultar todos alunos";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 97);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 347);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 333);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(670, 376);
+            this.btnAdicionar.Location = new System.Drawing.Point(670, 490);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(118, 62);
             this.btnAdicionar.TabIndex = 2;
-            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.Text = "Adicionar Aluno";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
+            // 
+            // btnAddCurso
+            // 
+            this.btnAddCurso.Location = new System.Drawing.Point(670, 558);
+            this.btnAddCurso.Name = "btnAddCurso";
+            this.btnAddCurso.Size = new System.Drawing.Size(118, 55);
+            this.btnAddCurso.TabIndex = 3;
+            this.btnAddCurso.Text = "Adicionar curso";
+            this.btnAddCurso.UseVisualStyleBackColor = true;
+            this.btnAddCurso.Click += new System.EventHandler(this.btnAddCurso_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Aluno:";
+            // 
+            // txtBuscarAluno
+            // 
+            this.txtBuscarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarAluno.Location = new System.Drawing.Point(89, 60);
+            this.txtBuscarAluno.Name = "txtBuscarAluno";
+            this.txtBuscarAluno.Size = new System.Drawing.Size(383, 26);
+            this.txtBuscarAluno.TabIndex = 5;
+            // 
+            // btnBuscarAluno
+            // 
+            this.btnBuscarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarAluno.Location = new System.Drawing.Point(478, 60);
+            this.btnBuscarAluno.Name = "btnBuscarAluno";
+            this.btnBuscarAluno.Size = new System.Drawing.Size(87, 26);
+            this.btnBuscarAluno.TabIndex = 6;
+            this.btnBuscarAluno.Text = "Buscar";
+            this.btnBuscarAluno.UseVisualStyleBackColor = true;
             // 
             // frmBuscarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 625);
+            this.Controls.Add(this.btnBuscarAluno);
+            this.Controls.Add(this.txtBuscarAluno);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAddCurso);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
@@ -73,6 +120,7 @@
             this.Text = "Buscar Aluno";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -81,6 +129,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.Button btnAddCurso;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBuscarAluno;
+        private System.Windows.Forms.Button btnBuscarAluno;
     }
 }
 

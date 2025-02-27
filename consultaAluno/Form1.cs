@@ -49,5 +49,17 @@ namespace consultaAluno
                 MessageBox.Show("Falha ao tentar conectar\n\n"+ ex.Message);
             }
         }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            frmCadastrarAluno frm = new frmCadastrarAluno();
+            frm.ShowDialog(); //ShowDialog() - abre um formulário com um diálogo modal
+        }
+
+        private void btnAddCurso_Click(object sender, EventArgs e)
+        {
+            frmCadastroCurso frm = new frmCadastroCurso();
+            frm.ShowDialog();
+        }
     }
 }
