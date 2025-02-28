@@ -61,5 +61,29 @@ namespace consultaAluno
             frmCadastroCurso frm = new frmCadastroCurso();
             frm.ShowDialog();
         }
+
+        private void btnBuscarAluno_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                {
+                    cn.Open();
+                    var sqlQuery = "SELECT * FROM alunos WHERE nomeAluno LIKE '%" + txtBuscarAluno.Text + "%'";
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            da.Fill(dt);
+                            dataGridView1.DataSource = dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao tentar conectar\n\n" +  ex.Message);
+            }
+        }
     }
 }

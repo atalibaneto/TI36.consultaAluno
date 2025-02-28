@@ -103,6 +103,7 @@
             this.btnBuscarAluno.TabIndex = 6;
             this.btnBuscarAluno.Text = "Buscar";
             this.btnBuscarAluno.UseVisualStyleBackColor = true;
+            this.btnBuscarAluno.Click += new System.EventHandler(this.btnBuscarAluno_Click);
             // 
             // frmBuscarAluno
             // 

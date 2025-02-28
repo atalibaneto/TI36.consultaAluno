@@ -168,6 +168,7 @@
             this.btnSalvarCurso.TabIndex = 12;
             this.btnSalvarCurso.Text = "Salvar";
             this.btnSalvarCurso.UseVisualStyleBackColor = true;
+            this.btnSalvarCurso.Click += new System.EventHandler(this.btnSalvarCurso_Click);
             // 
             // frmCadastroCurso
             // 
