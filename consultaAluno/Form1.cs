@@ -85,5 +85,23 @@ namespace consultaAluno
                 MessageBox.Show("Falha ao tentar conectar\n\n" +  ex.Message);
             }
         }
+
+        private void btnMatricularAluno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAtualizarAluno_Click(object sender, EventArgs e)
+        {
+            //var - palavra chave do C# especifica o tipo de variável é determinado automaticamente com base no valor atribuído a ela.
+            //dataGridView1.CurrentCell.RowIndex - pega o índice da linha atualmente selecionada no DataGridView.
+            // dataGridView1.Rows[...].Cells[0].Value - acessa o valor da primeira célula (coluna índice 0) dessa linha.
+            // a linha inteira serve para obter o id do aluno selecionado
+            var idAluno = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value);
+
+            //cria uma nova instância do formulário frmCadastroAluno, passando idAluno como parâmetro para o construtor.
+            frmCadastrarAluno frm = new frmCadastrarAluno(idAluno);
+            frm.ShowDialog();
+        }
     }
 }

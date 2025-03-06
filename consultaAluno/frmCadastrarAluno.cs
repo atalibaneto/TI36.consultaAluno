@@ -13,9 +13,53 @@ namespace consultaAluno
 {
     public partial class frmCadastrarAluno : Form
     {
-        public frmCadastrarAluno()
+        int idAluno = 0;
+        public frmCadastrarAluno(int idAluno)
         {
             InitializeComponent();
+            this.idAluno = idAluno;
+
+            if (this.idAluno > 0)
+                GetAluno(idAluno);
+
+        }
+
+        public frmCadastrarAluno()
+        {
+        }
+
+        private void GetAluno(int idAluno)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                {
+                    cn.Open();
+                    var sql = "SELECT * FROM alunos WHERE idAluno=" + idAluno;
+                    using (SqlCommand cmd = new SqlCommand(sql, cn))
+                    {
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.HasRows)
+                            {
+                                if (dr.Read())
+                                {
+                                    txtNome.Text = dr["nomeAluno"].ToString();
+                                    txtData.Text = dr["dataNascAluno"].ToString();
+                                    txtEmail.Text = dr["emailAluno"].ToString();
+                                    txtTel.Text = dr["telefoneAluno"].ToString();
+                                    txtAno.Text = dr["anoAluno"].ToString();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Dados não atualizados.\n\n" + ex.Message);
+            }
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

@@ -35,14 +35,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscarAluno = new System.Windows.Forms.TextBox();
             this.btnBuscarAluno = new System.Windows.Forms.Button();
+            this.btnAtualizarAluno = new System.Windows.Forms.Button();
+            this.btnMatricularAluno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 551);
+            this.button1.Location = new System.Drawing.Point(12, 561);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 62);
+            this.button1.Size = new System.Drawing.Size(141, 55);
             this.button1.TabIndex = 0;
             this.button1.Text = "Consultar todos alunos";
             this.button1.UseVisualStyleBackColor = true;
@@ -60,7 +62,7 @@
             // 
             this.btnAdicionar.Location = new System.Drawing.Point(670, 490);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(118, 62);
+            this.btnAdicionar.Size = new System.Drawing.Size(118, 38);
             this.btnAdicionar.TabIndex = 2;
             this.btnAdicionar.Text = "Adicionar Aluno";
             this.btnAdicionar.UseVisualStyleBackColor = true;
@@ -68,9 +70,9 @@
             // 
             // btnAddCurso
             // 
-            this.btnAddCurso.Location = new System.Drawing.Point(670, 558);
+            this.btnAddCurso.Location = new System.Drawing.Point(670, 534);
             this.btnAddCurso.Name = "btnAddCurso";
-            this.btnAddCurso.Size = new System.Drawing.Size(118, 55);
+            this.btnAddCurso.Size = new System.Drawing.Size(118, 38);
             this.btnAddCurso.TabIndex = 3;
             this.btnAddCurso.Text = "Adicionar curso";
             this.btnAddCurso.UseVisualStyleBackColor = true;
@@ -105,11 +107,33 @@
             this.btnBuscarAluno.UseVisualStyleBackColor = true;
             this.btnBuscarAluno.Click += new System.EventHandler(this.btnBuscarAluno_Click);
             // 
+            // btnAtualizarAluno
+            // 
+            this.btnAtualizarAluno.Location = new System.Drawing.Point(159, 561);
+            this.btnAtualizarAluno.Name = "btnAtualizarAluno";
+            this.btnAtualizarAluno.Size = new System.Drawing.Size(141, 55);
+            this.btnAtualizarAluno.TabIndex = 7;
+            this.btnAtualizarAluno.Text = "Atualizar Aluno";
+            this.btnAtualizarAluno.UseVisualStyleBackColor = true;
+            this.btnAtualizarAluno.Click += new System.EventHandler(this.btnAtualizarAluno_Click);
+            // 
+            // btnMatricularAluno
+            // 
+            this.btnMatricularAluno.Location = new System.Drawing.Point(670, 578);
+            this.btnMatricularAluno.Name = "btnMatricularAluno";
+            this.btnMatricularAluno.Size = new System.Drawing.Size(118, 38);
+            this.btnMatricularAluno.TabIndex = 8;
+            this.btnMatricularAluno.Text = "Matricular Aluno";
+            this.btnMatricularAluno.UseVisualStyleBackColor = true;
+            this.btnMatricularAluno.Click += new System.EventHandler(this.btnMatricularAluno_Click);
+            // 
             // frmBuscarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 625);
+            this.Controls.Add(this.btnMatricularAluno);
+            this.Controls.Add(this.btnAtualizarAluno);
             this.Controls.Add(this.btnBuscarAluno);
             this.Controls.Add(this.txtBuscarAluno);
             this.Controls.Add(this.label1);
@@ -134,6 +158,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscarAluno;
         private System.Windows.Forms.Button btnBuscarAluno;
+        private System.Windows.Forms.Button btnAtualizarAluno;
+        private System.Windows.Forms.Button btnMatricularAluno;
     }
 }
 
