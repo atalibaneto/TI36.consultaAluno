@@ -88,7 +88,8 @@ namespace consultaAluno
 
         private void btnMatricularAluno_Click(object sender, EventArgs e)
         {
-
+            frmMatriculaAluno frm = new frmMatriculaAluno();
+            frm.ShowDialog();
         }
 
         private void btnAtualizarAluno_Click(object sender, EventArgs e)
