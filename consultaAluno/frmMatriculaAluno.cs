@@ -56,7 +56,7 @@ namespace consultaAluno
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    cmbAlunos.Items.Add(new ComboboxItem
+                    cmbCursos.Items.Add(new ComboboxItem
                     {
                         Text = reader["nomeCurso"].ToString(),
                         Value = reader["idCurso"]
