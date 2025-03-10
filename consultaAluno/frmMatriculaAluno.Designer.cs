@@ -137,6 +137,10 @@
             this.cmbStatusMatricula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatusMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatusMatricula.FormattingEnabled = true;
+            this.cmbStatusMatricula.Items.AddRange(new object[] {
+            "Ativa",
+            "Cancelada",
+            "Concluída"});
             this.cmbStatusMatricula.Location = new System.Drawing.Point(336, 243);
             this.cmbStatusMatricula.Name = "cmbStatusMatricula";
             this.cmbStatusMatricula.Size = new System.Drawing.Size(121, 28);
