@@ -29,6 +29,7 @@ namespace consultaAluno
             InitializeComponent();
             CarregarAluno();
             CarregarCursos();
+            CarregarUnidades();
         }
         private void CarregarAluno()
         {
@@ -64,6 +65,23 @@ namespace consultaAluno
                 }
             }
         }
+        private void CarregarUnidades()
+        {
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT idUnidade, nomeUnidade FROM unidades", cn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmbUnidade.Items.Add(new ComboboxItem
+                    {
+                        Text = reader["nomeUnidade"].ToString(),
+                        Value = reader["idUnidade"]
+                    });
+                }
+            }
+        }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -73,22 +91,25 @@ namespace consultaAluno
                 return;
             }
             int idAluno = (int)(cmbAlunos.SelectedItem as ComboboxItem).Value;
-            int idCurso = (int)(cmbAlunos.SelectedItem as ComboboxItem).Value;
+            int idCurso = (int)(cmbCursos.SelectedItem as ComboboxItem).Value;
             DateTime dataMatricula = dtpDataMatricula.Value;
             string statusMatricula = cmbStatusMatricula.SelectedItem.ToString();
+            int idUnidade = (int)(cmbUnidade.SelectedItem as ComboboxItem).Value;
 
             using (SqlConnection cn = new SqlConnection(connectionString))
             {
                 cn.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO matriculas (idAluno, idCurso, dataMatricula, statusMatricula)" +
-                                                "VALUES (@idAluno, @idCurso, @dataMatricula, @statusMatricula)", cn);
+                SqlCommand cmd = new SqlCommand("INSERT INTO matriculas (idAluno, idCurso, dataMatricula, statusMatricula, idUnidade)" +
+                                                "VALUES (@idAluno, @idCurso, @dataMatricula, @statusMatricula, @idUnid)", cn);
                 cmd.Parameters.AddWithValue("@idAluno", idAluno);
                 cmd.Parameters.AddWithValue("@idCurso", idCurso);
                 cmd.Parameters.AddWithValue("@dataMatricula", dataMatricula);
                 cmd.Parameters.AddWithValue("@statusMatricula", statusMatricula);
+                cmd.Parameters.AddWithValue("@idUnid", idUnidade);
                 cmd.ExecuteNonQuery();
             }
             MessageBox.Show("Matrícula realizada com sucesso!");
         }
+
     }
 }

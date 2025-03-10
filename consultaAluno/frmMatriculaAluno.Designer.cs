@@ -40,6 +40,8 @@
             this.cmbCursos = new System.Windows.Forms.ComboBox();
             this.cmbStatusMatricula = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbUnidade = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,7 +106,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(382, 304);
+            this.btnSalvar.Location = new System.Drawing.Point(381, 341);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 33);
             this.btnSalvar.TabIndex = 6;
@@ -156,11 +158,32 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(204, 278);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(126, 20);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Unidade Escolar";
+            // 
+            // cmbUnidade
+            // 
+            this.cmbUnidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbUnidade.FormattingEnabled = true;
+            this.cmbUnidade.Location = new System.Drawing.Point(336, 277);
+            this.cmbUnidade.Name = "cmbUnidade";
+            this.cmbUnidade.Size = new System.Drawing.Size(121, 28);
+            this.cmbUnidade.TabIndex = 12;
+            // 
             // frmMatriculaAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 414);
+            this.Controls.Add(this.cmbUnidade);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmbStatusMatricula);
             this.Controls.Add(this.cmbCursos);
@@ -193,5 +216,7 @@
         private System.Windows.Forms.ComboBox cmbCursos;
         private System.Windows.Forms.ComboBox cmbStatusMatricula;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbUnidade;
     }
 }

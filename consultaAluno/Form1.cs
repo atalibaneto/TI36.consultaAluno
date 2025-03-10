@@ -52,7 +52,7 @@ namespace consultaAluno
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            frmCadastrarAluno frm = new frmCadastrarAluno();
+            frmCadastrarAluno frm = new frmCadastrarAluno(0);
             frm.ShowDialog(); //ShowDialog() - abre um formulário com um diálogo modal
         }
 
@@ -103,6 +103,13 @@ namespace consultaAluno
             //cria uma nova instância do formulário frmCadastroAluno, passando idAluno como parâmetro para o construtor.
             frmCadastrarAluno frm = new frmCadastrarAluno(idAluno);
             frm.ShowDialog();
+        }
+
+        private void btnAddUnidade_Click(object sender, EventArgs e)
+        {
+            frmUnidadeEscolar frm = new frmUnidadeEscolar();
+            frm.ShowDialog();
+
         }
     }
 }

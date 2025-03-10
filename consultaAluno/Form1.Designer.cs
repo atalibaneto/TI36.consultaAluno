@@ -37,6 +37,7 @@
             this.btnBuscarAluno = new System.Windows.Forms.Button();
             this.btnAtualizarAluno = new System.Windows.Forms.Button();
             this.btnMatricularAluno = new System.Windows.Forms.Button();
+            this.btnAddUnidade = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(670, 490);
+            this.btnAdicionar.Location = new System.Drawing.Point(670, 453);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(118, 38);
             this.btnAdicionar.TabIndex = 2;
@@ -70,7 +71,7 @@
             // 
             // btnAddCurso
             // 
-            this.btnAddCurso.Location = new System.Drawing.Point(670, 534);
+            this.btnAddCurso.Location = new System.Drawing.Point(670, 497);
             this.btnAddCurso.Name = "btnAddCurso";
             this.btnAddCurso.Size = new System.Drawing.Size(118, 38);
             this.btnAddCurso.TabIndex = 3;
@@ -127,11 +128,22 @@
             this.btnMatricularAluno.UseVisualStyleBackColor = true;
             this.btnMatricularAluno.Click += new System.EventHandler(this.btnMatricularAluno_Click);
             // 
+            // btnAddUnidade
+            // 
+            this.btnAddUnidade.Location = new System.Drawing.Point(670, 541);
+            this.btnAddUnidade.Name = "btnAddUnidade";
+            this.btnAddUnidade.Size = new System.Drawing.Size(118, 31);
+            this.btnAddUnidade.TabIndex = 9;
+            this.btnAddUnidade.Text = "Adicionar Unidade";
+            this.btnAddUnidade.UseVisualStyleBackColor = true;
+            this.btnAddUnidade.Click += new System.EventHandler(this.btnAddUnidade_Click);
+            // 
             // frmBuscarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 625);
+            this.Controls.Add(this.btnAddUnidade);
             this.Controls.Add(this.btnMatricularAluno);
             this.Controls.Add(this.btnAtualizarAluno);
             this.Controls.Add(this.btnBuscarAluno);
@@ -160,6 +172,7 @@
         private System.Windows.Forms.Button btnBuscarAluno;
         private System.Windows.Forms.Button btnAtualizarAluno;
         private System.Windows.Forms.Button btnMatricularAluno;
+        private System.Windows.Forms.Button btnAddUnidade;
     }
 }
 
